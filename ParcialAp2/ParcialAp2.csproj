@@ -83,11 +83,19 @@
     <Content Include="App_Data\Parcial1Db_log.ldf">
       <DependentUpon>Parcial1Db.mdf</DependentUpon>
     </Content>
+    <Content Include="Consultas\ConsultaPresupuestoWebForm.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="RegistroPresupuesto.aspx" />
+    <Content Include="Registros\RegistroPresupuesto.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consultas\ConsultaPresupuestoWebForm.aspx.cs">
+      <DependentUpon>ConsultaPresupuestoWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Consultas\ConsultaPresupuestoWebForm.aspx.designer.cs">
+      <DependentUpon>ConsultaPresupuestoWebForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -97,11 +105,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="RegistroPresupuesto.aspx.cs">
+    <Compile Include="Registros\RegistroPresupuesto.aspx.cs">
       <DependentUpon>RegistroPresupuesto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="RegistroPresupuesto.aspx.designer.cs">
+    <Compile Include="Registros\RegistroPresupuesto.aspx.designer.cs">
       <DependentUpon>RegistroPresupuesto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Utilidades.cs" />
