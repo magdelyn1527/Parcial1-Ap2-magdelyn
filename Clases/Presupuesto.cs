@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Entidades
 
@@ -7,9 +8,13 @@ namespace Entidades
     {
         [Key]
         public int IdPresupuesto{ get; set; }
-        public string Fecha { get; set; }
+        public DateTime Fecha { get; set; }
         public string Descripcion { get; set; }
         public int Monto { get; set; }
-        
+
+        public Presupuesto()
+        {
+                
+        }
     }
 }

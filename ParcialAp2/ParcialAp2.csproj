@@ -67,6 +67,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -75,33 +79,35 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ConsultaPresupuesto.aspx" />
+    <Content Include="App_Data\Parcial1Db.mdf" />
+    <Content Include="App_Data\Parcial1Db_log.ldf">
+      <DependentUpon>Parcial1Db.mdf</DependentUpon>
+    </Content>
     <Content Include="Global.asax" />
-    <Content Include="PrimerParcial.aspx" />
+    <Content Include="RegistroPresupuesto.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsultaPresupuesto.aspx.cs">
-      <DependentUpon>ConsultaPresupuesto.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ConsultaPresupuesto.aspx.designer.cs">
-      <DependentUpon>ConsultaPresupuesto.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="PrimerParcial.aspx.cs">
-      <DependentUpon>PrimerParcial.aspx</DependentUpon>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroPresupuesto.aspx.cs">
+      <DependentUpon>RegistroPresupuesto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PrimerParcial.aspx.designer.cs">
-      <DependentUpon>PrimerParcial.aspx</DependentUpon>
+    <Compile Include="RegistroPresupuesto.aspx.designer.cs">
+      <DependentUpon>RegistroPresupuesto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilidades.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="DataBase\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
